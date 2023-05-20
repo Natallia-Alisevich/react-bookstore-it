@@ -6,6 +6,7 @@ import {
 } from "pages";
 
 import { MainTemplate } from "templates";
+import { RequareAuth } from "components";
 
 export const router = createBrowserRouter(createRoutesFromElements(
     // Route <MainTemplate/> в кач-ве пропсов-чилдренов принимает все страницы 
@@ -19,6 +20,7 @@ export const router = createBrowserRouter(createRoutesFromElements(
         <Route path={ROUTE.RESETPASSWORD} element={<ResetPasswordPage />} />
         <Route path={ROUTE.SIGNUP} element={<SignUpPage />} />
         <Route path={ROUTE.DETAILS} element={<DetailsPage />} />
+        <Route path={ROUTE.REQUAREAUTH} element={<RequareAuth />} />
         <Route path={ROUTE.FAVORITE} element={<FavoritePage />} />
         <Route path={ROUTE.CART} element={<CartPage />} />
         <Route path={ROUTE.ACCOUNT} element={<AccountPage />} />
