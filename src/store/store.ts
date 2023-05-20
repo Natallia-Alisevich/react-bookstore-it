@@ -1,4 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
+import cartReducer from "./features/cart/cartSlice";
+import newBooksReducer from "./features/newBooks/newBooksSlice";
 //configureStore()-это ф-я обстракция над стандартной
 // ф-ей createStore(), эта ф-я есть у редакса, которая создает store, но
 // внутри редакстулкита она опущена и обернута в ф-ю configureStore(),
@@ -6,7 +8,10 @@ import { configureStore } from "@reduxjs/toolkit";
 //  ожидает 1 аргумент-опции, а опции-это какой-то объект:
 
 export const store = configureStore({
-  reducer: {}, // каждый reducer:-это ключ к объекту нашего редакса
+  reducer: {
+    cart: cartReducer,
+    newBooks: newBooksReducer,
+  }, // каждый reducer:-это ключ к объекту нашего редакса
 });
 
 export type RootState = ReturnType<typeof store.getState>; //д типизации нашего стора автом-ки
