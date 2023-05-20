@@ -17,7 +17,8 @@ const useAppSelector: TypedUseSelectorHook<RootState> = useSelector;
 
 //2. тип-ем dispatch:
 const useAppDispatch: () => AppDispatch = useDispatch;
-// здесь происходит: перем-я useAppDispatch б содержать тип в виде ф-ции, а эта ф-я б возвращать AppDispatch
+// здесь происходит: перем-я useAppDispatch б содержать тип в виде ф-ции,
+// а эта ф-я б возвращать AppDispatch
 // AppDispatch-это в сторе мы создали (он типизирует наш диспатч (наши экшины))
 
 export { useAppSelector, useAppDispatch };
