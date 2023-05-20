@@ -2,7 +2,7 @@ import { BookList } from "components";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { ROUTE } from "routes";
-import { addToCart, clearCart, selectorCart } from "store";
+import { addToCart, clearCart, selectCart } from "store";
 import { useAppDispatch, useAppSelector } from "store/hooks/hooks";
 import { BookInfo, BookStore } from "types";
 import { NewInfo } from "types/types";
@@ -23,7 +23,7 @@ export const HomePage = () => {
   // const { products } = useAppSelector((state) => state.cart)//state-это весь наш store.
   //  Мы ставим "." и берем у стора ключ cart (state.cart)
   // для useAppSelector надо написать селектор =>
-  const { products } = useAppSelector(selectorCart)
+  const { products } = useAppSelector(selectCart)
 
   // useSelector-это хук предост доступ к стору, т.е. тогда мы данные из стора
   // (данные наших слайсов) сможем отобразить. Этот хук в кач аргум

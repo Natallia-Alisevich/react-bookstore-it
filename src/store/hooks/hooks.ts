@@ -22,3 +22,5 @@ const useAppDispatch: () => AppDispatch = useDispatch;
 // AppDispatch-это в сторе мы создали (он типизирует наш диспатч (наши экшины))
 
 export { useAppSelector, useAppDispatch };
+
+// добавить хук useLockBodyScroll
