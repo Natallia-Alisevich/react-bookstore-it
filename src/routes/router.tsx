@@ -4,7 +4,6 @@ import { ROUTE } from "./routes";
 
 export const router = createBrowserRouter(createRoutesFromElements(
 
-
     <Route >
     </Route>
 ));
