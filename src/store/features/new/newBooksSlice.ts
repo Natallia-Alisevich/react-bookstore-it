@@ -25,7 +25,7 @@ const newBooksSlice = createSlice({
 export default newBooksSlice.reducer;
 
 export const { newInfo } = newBooksSlice.actions; //выз ф-ю эдкарт в hompage
-
+// export const { addToCart } = cartSlice.actions; //выз ф-ю эдкарт в hompage
 
 // здесь хр-ся данные (как контекст)
 // переходим в store.ts и в редусер вносим нашкусочек корзины

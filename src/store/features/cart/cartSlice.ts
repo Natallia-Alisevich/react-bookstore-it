@@ -1,20 +1,21 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
+import { BooksInfo } from "types";
 
 interface CartState {
-  products: any;
+  products: BooksInfo[];
   totalCost: number;
 }
 
 const initialState: CartState = {
   products: [],
-  totalCost: 200,
+  totalCost: 0,
 };
 
 const cartSlice = createSlice({
   name: "cart",
   initialState,
   reducers: {
-    addToCart: (state, { payload }: PayloadAction<{ id: number; name: string }>) => {
+    addToCart: (state, { payload }: PayloadAction<BooksInfo>) => {
       //это мутабельный экшн (т.к. push меняет-доб-ет)
       // state.products.push({ id: 1, name: "Book for IT" });
       state.products.push(payload);
