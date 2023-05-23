@@ -2,8 +2,20 @@ import { useDebounce } from "./hooks/useDebounce";
 import { useToggle } from "./hooks/useToggle";
 import { store, RootState, AppDispatch } from "./store";
 import { addToCart, clearCart } from "./features/cart/cartSlice";
-import { selectorCart } from "./selectors/cartSelector";
-import { selectorNewBook } from "./selectors/newBookSelector";
+import { fetchSearchBooks } from "./features/search/searchSlice";
+import { fetchNewBooks } from "./features/new/newBooksSlice";
+import { selectCart } from "./selectors/cartSelector";
+import { selectNewBook } from "./selectors/newBookSelector";
 
-export { useDebounce, useToggle, store, addToCart, clearCart, selectorCart, selectorNewBook };
+export {
+  useDebounce,
+  useToggle,
+  store,
+  addToCart,
+  clearCart,
+  fetchSearchBooks,
+  fetchNewBooks,
+  selectCart,
+  selectNewBook,
+};
 export type { RootState, AppDispatch };

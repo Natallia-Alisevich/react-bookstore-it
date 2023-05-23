@@ -1,3 +1,3 @@
-import { SearchInfo, BookInfo, BookStore } from "./types";
+import { BooksInfo, SearchInfo, BookInfo, BookStore } from "./types";
 
-export type { SearchInfo, BookInfo, BookStore };
+export type { BooksInfo, SearchInfo, BookInfo, BookStore };

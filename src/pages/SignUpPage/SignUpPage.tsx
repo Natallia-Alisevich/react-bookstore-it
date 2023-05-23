@@ -1,8 +1,8 @@
-import React from "react"
+import React from "react";
 
 export const SignUpPage = () => {
-    return (
-        <div>SignUpPage</div>
-    )
-}
+  return (
+    <div>SignUpPage</div>
+  );
+};
 
