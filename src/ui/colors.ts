@@ -13,5 +13,6 @@ export enum Color {
 
   Primary_Text = "var(--primary-text)",
   Primary_Bg = "var(--primary-bg)",
+  Secondary_Bg = "var(--secondary-bg)",
   Search_Bg = "var(--search-bg)",
 }

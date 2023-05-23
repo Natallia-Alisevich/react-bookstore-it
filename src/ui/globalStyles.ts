@@ -1,5 +1,15 @@
 import { createGlobalStyle } from "styled-components";
 import { reset } from "./reset";
+import { Color } from "./colors";
 
 export const GlobalStyles = createGlobalStyle`
-${reset};`;
+${reset};
+body{
+  font-family: 'Helios';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  color: ${Color.Primary};
+  background-color: ${Color.White};
+}
+`;

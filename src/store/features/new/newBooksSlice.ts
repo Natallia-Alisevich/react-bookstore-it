@@ -53,6 +53,10 @@ const newBooksSlice = createSlice({
 
 export default newBooksSlice.reducer;
 
+// говорим билдеру: добавь кейс, когда ты б работать с экшином (fetchNewBooks) у него
+// еще б сост-е pending (отправка) на основе промиса. З! addCase при наведении напоминает передать
+// reducer (ф-я,кот принимает 1 арг-м всегда state)
+
 //!!! Это для неасинхрон кода, а выше д асинхр кода с пом библ axios:
 // import { createSlice } from "@reduxjs/toolkit";
 
