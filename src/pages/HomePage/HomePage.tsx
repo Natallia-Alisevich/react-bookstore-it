@@ -2,21 +2,24 @@ import { BookList } from "components";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { ROUTE } from "routes";
-import { addToCart, clearCart, fetchSearchBooks, selectCart } from "store";
-// import { fetchSearchBooks } from "store/features/search/searchSlice";
+import {
+  addToCart, clearCart, fetchNewBooks, selectCart,
+  selectNewBook
+} from "store";
 import { useAppDispatch, useAppSelector } from "store/hooks/hooks";
 import { selectSearch } from "store/selectors/searchSelector";
 import { BookInfo, BookStore } from "types";
 import { NewInfo } from "types/types";
 
 export const HomePage = () => {
-  const { books } = useAppSelector(selectSearch);
+  // const { books } = useAppSelector(selectSearch);
+  const { books } = useAppSelector(selectNewBook);
 
-  const [newBooks, setNewBooks] = useState<NewInfo>({
-    error: "0",
-    total: "20",
-    books: [],
-  });
+  // const [newBooks, setNewBooks] = useState<NewInfo>({
+  //   error: "0",
+  //   total: "20",
+  //   books: [],
+  // });
 
   const dispatch = useAppDispatch();//!!!только с пом диспатч 
   // // м вызывать изм-я стора любое действие на UI, которое изм-ет 
@@ -47,17 +50,17 @@ export const HomePage = () => {
     dispatch(clearCart());
   };
 
-  useEffect(() => {
-    fetch("https://api.itbook.store/1.0/new")
-      .then((response) => response.json())
-      // .then((response) => {console.log(response.books);});
-      .then((response) => setNewBooks(response));
-  }, []);
+  // useEffect(() => {
+  //   fetch("https://api.itbook.store/1.0/new")
+  //     .then((response) => response.json())
+  //     // .then((response) => {console.log(response.books);});
+  //     .then((response) => setNewBooks(response));
+  // }, []);
 
   // д асинхр экшинов исп axios, без fetch:
   // примонтаже н вызв изм-е стэйта -диспатч и в него передать экшн, с которым б работать
   useEffect(() => {
-    // dispatch(fetchSearchBooks());
+    dispatch(fetchNewBooks());
   }, [dispatch]);
 
   return (
@@ -65,10 +68,6 @@ export const HomePage = () => {
       <h1>HomePage</h1>
       <button onClick={handleAddToCart}>add to cart</button>
       <button onClick={handleClearToCart}>clear cart</button>
-      {/* <div>{products}</div> */}
-      {/* <ul>{products.map((product: any) => {
-        return <li>{product}</li>
-      })}</ul> */}
       <h1>New Releases Books</h1>
       <Link to={ROUTE.FAVORITE}>Go to favorite</Link>
       <Link to={ROUTE.SEARCH}>Go to Search</Link>
@@ -77,7 +76,8 @@ export const HomePage = () => {
       <Link to={ROUTE.SIGNUP}>Go to Sign up</Link>
 
       <p> quis aspead tempora, perspiciatis dolores magnam?</p>
-      <BookList newBooks={newBooks} />
+      <BookList books={books} />
+      {/* <BookList newBooks={newBooks} /> */}
     </div>
   );
 };

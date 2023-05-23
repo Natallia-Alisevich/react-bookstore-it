@@ -3,6 +3,7 @@ import { useToggle } from "./hooks/useToggle";
 import { store, RootState, AppDispatch } from "./store";
 import { addToCart, clearCart } from "./features/cart/cartSlice";
 import { fetchSearchBooks } from "./features/search/searchSlice";
+import { fetchNewBooks } from "./features/new/newBooksSlice";
 import { selectCart } from "./selectors/cartSelector";
 import { selectNewBook } from "./selectors/newBookSelector";
 
@@ -13,6 +14,7 @@ export {
   addToCart,
   clearCart,
   fetchSearchBooks,
+  fetchNewBooks,
   selectCart,
   selectNewBook,
 };

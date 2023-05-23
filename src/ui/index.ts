@@ -1,4 +1,5 @@
+import { reset } from "./reset";
 import { Color } from "./colors";
-// import { lightTheme, darkTheme } from "./theme";
-export { Color };
-// export { Color, lightTheme, darkTheme };
+import { GlobalStyles } from "./globalStyles";
+
+export { reset, Color, GlobalStyles };

@@ -21,3 +21,5 @@ const useAppDispatch: () => AppDispatch = useDispatch;
 // AppDispatch,AD -это в сторе мы создали (он типизирует наш диспатч (наши экшины))
 
 export { useAppSelector, useAppDispatch };
+
+// Пробовать :https://scrollex-docs.vercel.app/examples?page=2
