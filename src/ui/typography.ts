@@ -3,6 +3,7 @@ import { Color } from "ui";
 import { Media } from "./media";
 
 const Head1 = css`
+  font-family: "Bebas Neue";
   font-weight: 700;
   color: ${Color.Primary};
   font-size: 56px;
@@ -14,7 +15,7 @@ const Head1 = css`
   }
 `;
 const SubText = css`
-  font-family: "Helios";
+  font-family: "Helios Antique", sans-serif;
   font-style: italic;
   font-weight: 400;
   font-size: 16px;
@@ -22,6 +23,7 @@ const SubText = css`
   color: ${Color.Secondary_lightGrey};
 `;
 const Head2 = css`
+  font-family: "Bebas Neue";
   font-weight: 700;
   font-size: 40px;
   line-height: 60px;
@@ -33,6 +35,7 @@ const Head2 = css`
   }
 `;
 const Head3 = css`
+  font-family: "Bebas Neue";
   font-weight: 700;
   font-size: 24px;
   line-height: 32px;
@@ -40,6 +43,7 @@ const Head3 = css`
   color: ${Color.Primary};
 `;
 const Sub1 = css`
+  font-family: "Bebas Neue";
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
@@ -48,7 +52,7 @@ const Sub1 = css`
 `;
 
 const BodyHead1 = css`
-  font-family: "Helios";
+  font-family: 'Helios Antique', sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
@@ -56,7 +60,7 @@ const BodyHead1 = css`
   color: ${Color.Primary};
 `;
 const BodyText1 = css`
-  font-family: "Helios";
+  font-family: 'Helios Antique', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -64,7 +68,7 @@ const BodyText1 = css`
   color: ${Color.Primary};
 `;
 const BodySubText = css`
-  font-family: "Helios";
+  font-family: "Helios Antique", sans-serif;
   font-style: italic;
   font-weight: 400;
   font-size: 12px;
@@ -80,7 +84,7 @@ const BodyHead2 = css`
   color: ${Color.Primary};
 `;
 const BodyText2 = css`
-  font-family: "Helios";
+  font-family: 'Helios Antique', sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 16px;

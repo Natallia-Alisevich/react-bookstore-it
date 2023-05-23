@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Color } from "ui";
 import { BodySubText, Head3, SubText } from "ui/typography";
