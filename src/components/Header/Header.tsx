@@ -12,7 +12,6 @@ export const Header = () => {
         <HeaderLogo>
           < BookstoreIcon />
         </HeaderLogo>
-        {/* <Spinner /> */}
       </Link>
       <input />
       <HeaderNavigate>

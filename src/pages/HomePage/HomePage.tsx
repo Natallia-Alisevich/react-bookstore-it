@@ -1,4 +1,4 @@
-import { BookList } from "components";
+import { BookList, Spinner } from "components";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { ROUTE } from "routes";
@@ -13,7 +13,7 @@ import { NewInfo } from "types/types";
 
 export const HomePage = () => {
   // const { books } = useAppSelector(selectSearch);
-  const { books } = useAppSelector(selectNewBook);
+  const { isLoading, books, error } = useAppSelector(selectNewBook);
 
   // const [newBooks, setNewBooks] = useState<NewInfo>({
   //   error: "0",
@@ -76,11 +76,16 @@ export const HomePage = () => {
       <Link to={ROUTE.SIGNUP}>Go to Sign up</Link>
 
       <p> quis aspead tempora, perspiciatis dolores magnam?</p>
-      <BookList books={books} />
-      {/* <BookList newBooks={newBooks} /> */}
+      {isLoading && <Spinner />}
+      {error && <div>{error}</div>}
+      {books?.length > 0 && < BookList books={books} />}
     </div>
   );
 };
 
 
 
+// { isLoading && (<Spinner />) }//е загрузка, то отобр спиннер
+// books?.length -е у нас есть books и их дл >0, то отобр список книг
+
+//!!!  на стр поиска, дитэйлс, карт, аккаунт тоже асинхр код

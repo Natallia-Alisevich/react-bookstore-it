@@ -14,7 +14,7 @@ interface SearchInfo {
   books: BooksInfo[];
 }
 interface NewInfo {
-  error: string;
+  error: string | null;
   total: string;
   books: BooksInfo[];
 }

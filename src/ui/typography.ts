@@ -52,7 +52,7 @@ const Sub1 = css`
 `;
 
 const BodyHead1 = css`
-  font-family: 'Helios Antique', sans-serif;
+  font-family: "Helios Antique", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
@@ -60,7 +60,7 @@ const BodyHead1 = css`
   color: ${Color.Primary};
 `;
 const BodyText1 = css`
-  font-family: 'Helios Antique', sans-serif;
+  font-family: "Helios Antique", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -84,7 +84,7 @@ const BodyHead2 = css`
   color: ${Color.Primary};
 `;
 const BodyText2 = css`
-  font-family: 'Helios Antique', sans-serif;
+  font-family: "Helios Antique", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 16px;

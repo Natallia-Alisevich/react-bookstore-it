@@ -17,13 +17,13 @@ const initialState: NewBooksState = {
 
 export const fetchNewBooks = createAsyncThunk<NewInfo, undefined, { rejectValue: string }>(
   "newBook/fetchNewBooks",
-  async (newBook) => {
+  async (_, { rejectWithValue }) => {
     try {
       const { data } = await axios.get("https://api.itbook.store/1.0/new");
       return data;
     } catch (error) {
       const someErrorMessage = error as AxiosError;
-      return isRejectedWithValue(someErrorMessage.message);
+      return rejectWithValue(someErrorMessage.message);
     }
   },
 );
