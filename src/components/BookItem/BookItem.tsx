@@ -6,12 +6,12 @@ import {
 
     BookCard,
     StyledCardImg,
-    BookInfo,
     ImageWrapper,
     BookPrice,
     StyledTitle,
     BookAuth,
-    Rate
+    Rate,
+    BookInfoWrapper,
 } from "./styles";
 
 
@@ -30,13 +30,12 @@ export const BookItem = ({ book }: BookItemProps) => {
                     <StyledCardImg src={book.image} alt={book.title}></StyledCardImg>
                 </ImageWrapper>
             </Link>
-            <BookInfo>
+            <BookInfoWrapper>
                 <StyledTitle>{book.title}</StyledTitle>
                 <BookAuth>{book.subtitle}</BookAuth>
                 <BookPrice > {book.price}</BookPrice>
                 <Rate>{book.rating}</Rate>
-            </BookInfo>
-
+            </BookInfoWrapper>
         </BookCard>
     );
 };

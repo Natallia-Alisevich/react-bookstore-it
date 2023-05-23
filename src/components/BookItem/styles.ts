@@ -5,33 +5,48 @@ import { BodySubText, Head3, SubText } from "ui/typography";
 const BookCard = styled.div`
   display: grid;
   width: 100%;
-  gap: 20px;
+  /* gap: 20px; */
   max-width: 352px;
-  /* flex-direction: column; */
+  /* height: 277px; */
+  flex-direction: column;
   cursor: pointer;
 
   &:hover {
-    transition: 0.5s double;
-    border: 5px double ${Color.Orange};
+    transition: 0.5s solid;
+    border: 5px solid ${Color.Orange};
   }
 `;
 const ImageWrapper = styled.div`
   display: flex;
   justify-content: center;
   width: 100%;
+  height: 264px;
 `;
 const StyledCardImg = styled.img`
   max-width: 226px;
 `;
-const BookInfo = styled.div`
+const BookInfoWrapper = styled.div`
   display: flex;
+  height: 100px;
   flex-direction: column;
+  padding: 8px;
 `;
+
 const StyledTitle = styled.p`
   ${Head3}
+  -webkit-line-clamp: 1;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
 `;
 const BookAuth = styled.p`
-  ${SubText}
+  ${SubText};
+  -webkit-line-clamp: 1;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
 `;
 const BookPrice = styled.p`
   ${Head3};
@@ -50,7 +65,7 @@ export {
   BookCard,
   StyledCardImg,
   ImageWrapper,
-  BookInfo,
+  BookInfoWrapper,
   StyledTitle,
   SubText,
   BookAuth,
