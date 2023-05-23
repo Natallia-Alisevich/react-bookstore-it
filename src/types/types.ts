@@ -5,15 +5,16 @@ interface BooksInfo {
   price: string;
   image: string;
   url: string;
+  rating?: string;
 }
 interface SearchInfo {
-  error: string;
+  error: string | null;
   total: string;
   page: string;
   books: BooksInfo[];
 }
 interface NewInfo {
-  error: string;
+  error: string | null;
   total: string;
   books: BooksInfo[];
 }
@@ -47,4 +48,4 @@ interface BookStore {
   Books: BookInfo;
 }
 
-export type { SearchInfo, BookInfo, NewInfo, BookStore };
+export type { BooksInfo, SearchInfo, BookInfo, NewInfo, BookStore };

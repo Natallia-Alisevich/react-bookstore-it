@@ -1,8 +1,9 @@
 import React from "react";
-import { HeaderLogo, HeaderNavigate, StyledHeader } from "./styled";
+import { HeaderLogo, HeaderNavigate, StyledHeader } from "./styles";
 import { Link } from "react-router-dom";
 import { BookstoreIcon, HeartIcon, CartIcon, PersonIcon } from "assets";
 import { ROUTE } from "routes";
+import { Spinner } from "components";
 
 export const Header = () => {
   return (

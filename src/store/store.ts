@@ -1,6 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
 import cartReducer from "./features/cart/cartSlice";
-import newBooksReducer from "./features/newBooks/newBooksSlice";
+import newBooksReducer from "./features/new/newBooksSlice";
+import searchBooksReducer from "./features/search/searchSlice";
+import favoriteBooksReducer from "./features/favorite/favoriteBooksSlice";
+
 //configureStore()-это ф-я обстракция над стандартной
 // ф-ей createStore(), эта ф-я есть у редакса, которая создает store, но
 // внутри редакстулкита она опущена и обернута в ф-ю configureStore(),
@@ -11,6 +14,8 @@ export const store = configureStore({
   reducer: {
     cart: cartReducer,
     newBooks: newBooksReducer,
+    searchBooks: searchBooksReducer,
+    favoriteBooks: favoriteBooksReducer,
   }, // каждый reducer:-это ключ к объекту нашего редакса
 });
 
