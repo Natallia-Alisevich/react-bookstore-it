@@ -6,7 +6,7 @@ const StyledHeader = styled.header`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 24px 0px;
+  padding: 23px 0px;
   border-bottom: 1px solid ${Color.Grey};
 `;
 const HeaderLogo = styled.div`
