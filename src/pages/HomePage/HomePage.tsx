@@ -11,6 +11,7 @@ import { selectSearch } from "store/selectors/searchSelector";
 import { BookInfo, BookStore } from "types";
 import { NewInfo } from "types/types";
 
+
 export const HomePage = () => {
   // const { books } = useAppSelector(selectSearch);
   const { isLoading, books, error } = useAppSelector(selectNewBook);

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, generatePath } from "react-router-dom";
 import { ROUTE } from "../../routes";
-import { BooksInfo } from "types/types";
+import { BookInfo, BooksInfo } from "types/types";
 import { BookItem } from "components/BookItem/BookItem";
 import { BooksWrapper } from "./styles";
 
