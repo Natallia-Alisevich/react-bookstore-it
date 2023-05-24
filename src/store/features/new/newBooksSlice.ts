@@ -10,7 +10,7 @@ interface NewBooksState extends NewInfo {
 
 const initialState: NewBooksState = {
   books: [],
-  error: "200",
+  error: null,
   total: "",
   isLoading: false,
 };
