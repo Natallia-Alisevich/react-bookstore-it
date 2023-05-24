@@ -3,6 +3,7 @@ import { Color } from "ui";
 
 const StyledHeader = styled.header`
   display: flex;
+  margin-bottom: 20px;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;

@@ -1,8 +1,11 @@
 import React from "react";
-import { StyledFooter } from "./styles";
+import { FooterInfo, StyledFooter } from "./styles";
 
 export const Footer = () => {
   return (
-    <StyledFooter>Footer</StyledFooter>
+    <StyledFooter>
+      <FooterInfo>©2023 Bookstore</FooterInfo>
+      <FooterInfo>All rights reserved</FooterInfo>
+    </StyledFooter>
   );
 };

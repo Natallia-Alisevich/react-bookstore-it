@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { Color } from "ui";
-import { Media } from "ui/media";
 
 const BooksWrapper = styled.div`
   display: flex;
