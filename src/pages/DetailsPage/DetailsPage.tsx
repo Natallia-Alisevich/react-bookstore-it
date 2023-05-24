@@ -3,6 +3,12 @@ import React, { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { ROUTE } from "routes";
 import { BookInfo } from "types";
+import {
+  DetailsBookBg, DetailsCard, DetailsCardInfo, DetailsDescr, DetailsInfoHead,
+  DetailsPreview, DetailsPrice, DetailsTitle,
+  InfoWrap,
+  StyledButton
+} from "./styles";
 
 
 
@@ -40,20 +46,26 @@ export const DetailsPage = () => {
 
   return (
     <>
-      <h1>Details</h1>
-      <h1>{detailsBook?.title}</h1>
-      <img src={detailsBook?.image} alt={detailsBook?.title}></img>
-      <h3>{detailsBook?.price}</h3>
-      <h3>{detailsBook?.rating}</h3>
-      <p>Authors: {detailsBook?.authors}</p>
-      <p>Publisher: {detailsBook?.publisher}</p>
-      <p>Year: {detailsBook?.year}</p>
-      <p>Format: Paper book/ebook (PDF)</p>
-      <p>{detailsBook?.desc}</p>
+      <DetailsTitle>{detailsBook?.title}</DetailsTitle>
+      <DetailsCard>
+        <DetailsBookBg><img src={detailsBook?.image} alt={detailsBook?.title}></img></DetailsBookBg>
+        <DetailsCardInfo>
+          <DetailsInfoHead><DetailsPrice>{detailsBook?.price}</DetailsPrice>
+            <h3>{detailsBook?.rating}</h3></DetailsInfoHead>
+          <InfoWrap>Authors: <span>{detailsBook?.authors}</span></InfoWrap>
+          <InfoWrap>Publisher: <span>{detailsBook?.publisher}</span></InfoWrap>
+          <InfoWrap>Year: <span>{detailsBook?.year}</span></InfoWrap>
+          <InfoWrap>Format: <span>Paper book/ebook (PDF)</span></InfoWrap>
+          <StyledButton>add to cart</StyledButton>
+          <DetailsPreview>Preview book</DetailsPreview>
+        </DetailsCardInfo>
+      </DetailsCard>
+
+
+      <DetailsDescr>{detailsBook?.desc}</DetailsDescr>
       <Link to={ROUTE.HOME}>go to HOMEPAGE</Link>
       {/* или так: */}
       <button onClick={handleBack}>BACK</button>
-
     </>
   );
 };
