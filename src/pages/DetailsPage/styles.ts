@@ -14,7 +14,6 @@ const DetailsCard = styled.p`
   justify-content: space-between;
   margin-bottom: 72px;
   ${Media.md} {
-    /* width: 100%; */
     flex-wrap: wrap;
     margin-bottom: 49px;
   }
@@ -38,7 +37,6 @@ const DetailsCardInfo = styled.div`
   ${Media.md} {
     width: 100%;
     flex-wrap: wrap;
-    margin-bottom: 89px;
   }
 `;
 const DetailsInfoHead = styled.div`
@@ -72,9 +70,19 @@ const DetailsPreview = styled.div`
   display: flex;
   justify-content: center;
   margin-top: 40px;
+  ${Media.md} {
+    /* margin-bottom: auto; */
+    /* width: 100%;
+    flex-wrap: wrap;
+    margin-bottom: 89px; */
+  }
 `;
 const DetailsDescr = styled.div`
-  ${BodyText1}
+  ${BodyText1}/* ${Media.md} {
+    width: 100%;
+    flex-wrap: wrap;
+    margin-bottom: 89px;
+  } */
 `;
 export {
   DetailsTitle,

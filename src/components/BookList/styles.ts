@@ -6,6 +6,7 @@ const BooksWrapper = styled.div`
   flex-wrap: wrap;
   gap: 32px;
   justify-content: space-between;
+  padding-bottom: 73px;
   border-bottom: 1px solid ${Color.Grey};
   & :last-child {
     gap: 0;

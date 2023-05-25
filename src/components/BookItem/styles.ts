@@ -69,16 +69,11 @@ const BookAuth = styled.p`
 const BookPrice = styled.p`
   ${Head3};
 `;
-
-const Rate = styled.div`
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  border-radius: 6px;
-  padding: 2px 8px;
-  ${BodySubText};
-  color: ${Color.Primary};
+const WrapPrice = styled.p`
+  display: flex;
+  justify-content: space-between;
 `;
+
 export {
   BookCard,
   StyledCardImg,
@@ -88,5 +83,5 @@ export {
   SubText,
   BookAuth,
   BookPrice,
-  Rate,
+  WrapPrice,
 };
