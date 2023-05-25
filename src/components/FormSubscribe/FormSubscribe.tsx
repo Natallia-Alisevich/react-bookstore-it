@@ -1,6 +1,4 @@
 import React from "react";
-// import { AddEmail, ButtonSubscribe, InputEmail, Subtitle, TitleForm } from "./styled";
-// import { Button, Input } from "components";
 import { Controller, useForm } from "react-hook-form";
 import { StyledButton, StyledForm, StyledInput, Subtitle, Title, WrapValue } from "./styles";
 
@@ -49,16 +47,5 @@ export const FormSubscribe = () => {
             </WrapValue>
 
         </StyledForm>
-
-
-        // <AddEmail onSubmit={handleSubmit(onSubmit)}>
-        //     <TitleForm>Subscribe to Newsletter</TitleForm>
-        //     <Subtitle>
-        //         Be the first to know about new IT books, upcoming releases,
-        //  exclusive offers and more.
-        //     </Subtitle>
-        //     <InputEmail placeholder="Your email" />
-        //     <ButtonSubscribe type="submit">Subscribe</ButtonSubscribe>
-        // </AddEmail>
     );
 };
