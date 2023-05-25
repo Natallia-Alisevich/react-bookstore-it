@@ -1,4 +1,5 @@
 import { BookList, Spinner } from "components";
+import { FormSubscribe } from "components/FormSubscribe/FormSubscribe";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { ROUTE } from "routes";
@@ -80,6 +81,7 @@ export const HomePage = () => {
       {isLoading && <Spinner />}
       {error && <div>{error}</div>}
       {books?.length > 0 && < BookList books={books} />}
+      <FormSubscribe />
     </div>
   );
 };
