@@ -1,4 +1,5 @@
 import { BookList, Spinner } from "components";
+import { FormSubscribe } from "components/FormSubscribe/FormSubscribe";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { ROUTE } from "routes";
@@ -10,6 +11,7 @@ import { useAppDispatch, useAppSelector } from "store/hooks/hooks";
 import { selectSearch } from "store/selectors/searchSelector";
 import { BookInfo, BookStore } from "types";
 import { NewInfo } from "types/types";
+
 
 export const HomePage = () => {
   // const { books } = useAppSelector(selectSearch);
@@ -79,6 +81,7 @@ export const HomePage = () => {
       {isLoading && <Spinner />}
       {error && <div>{error}</div>}
       {books?.length > 0 && < BookList books={books} />}
+      <FormSubscribe />
     </div>
   );
 };

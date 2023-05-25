@@ -9,6 +9,7 @@ import {
   InfoWrap,
   StyledButton
 } from "./styles";
+import { Star } from "components/StarRating/StarRating";
 
 
 
@@ -51,7 +52,9 @@ export const DetailsPage = () => {
         <DetailsBookBg><img src={detailsBook?.image} alt={detailsBook?.title}></img></DetailsBookBg>
         <DetailsCardInfo>
           <DetailsInfoHead><DetailsPrice>{detailsBook?.price}</DetailsPrice>
-            <h3>{detailsBook?.rating}</h3></DetailsInfoHead>
+            {detailsBook?.rating !== undefined && <Star stars={+detailsBook?.rating} />}
+
+          </DetailsInfoHead>
           <InfoWrap>Authors: <span>{detailsBook?.authors}</span></InfoWrap>
           <InfoWrap>Publisher: <span>{detailsBook?.publisher}</span></InfoWrap>
           <InfoWrap>Year: <span>{detailsBook?.year}</span></InfoWrap>

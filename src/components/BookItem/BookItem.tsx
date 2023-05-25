@@ -10,9 +10,10 @@ import {
     BookPrice,
     StyledTitle,
     BookAuth,
-    Rate,
     BookInfoWrapper,
+    WrapPrice,
 } from "./styles";
+import { Star } from "components/StarRating/StarRating";
 
 
 interface BookItemProps {
@@ -22,6 +23,7 @@ interface BookItemProps {
 
 
 export const BookItem = ({ book }: BookItemProps) => {
+    console.log({ book });
     return (
         <BookCard>
             <Link key={book.isbn13}
@@ -33,8 +35,12 @@ export const BookItem = ({ book }: BookItemProps) => {
             <BookInfoWrapper>
                 <StyledTitle>{book.title}</StyledTitle>
                 <BookAuth>{book.subtitle}</BookAuth>
-                <BookPrice > {book.price}</BookPrice>
-                <Rate>{book.rating}</Rate>
+                <WrapPrice>
+                    <BookPrice > {book.price}</BookPrice>
+                    {/* <Star stars={+book.rating} /> */}
+                    {book.rating ? <Star stars={+book.rating} /> : <Star stars={2} />}
+                </WrapPrice>
+                {/* <Rate>{book.rating}</Rate> */}
             </BookInfoWrapper>
         </BookCard>
     );
