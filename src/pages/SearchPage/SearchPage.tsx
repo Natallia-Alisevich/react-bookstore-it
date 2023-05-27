@@ -21,6 +21,10 @@ export const SearchPage = () => {
   const dispatch = useAppDispatch();
 
   const onSubmit = ({ searchValue }: any) => { dispatch(fetchSearchBooks(searchValue)) };
+  // const [currentPage, setCurrentPage] = useState(1);
+
+  // const onSubmit = ({searchValue }: any) =>
+  //  { dispatch(fetchSearchBooks(currentPage, searchValue)) };
 
   interface SearchState extends SearchInfo {
     isLoading: boolean;
@@ -29,16 +33,12 @@ export const SearchPage = () => {
   const [search, setSearchBooks] = useState<SearchState>();
 
 
-
-
-
-
-  useEffect(() => {
-    fetch("`https://api.itbook.store/1.0/search/${search}`")
-      .then((response) => response.json())
-      .then((response) => { console.log(response.search); });
-    // .then((response) => setSearchBooks(response));
-  }, [title]);
+  // useEffect(() => {
+  //   fetch("`https://api.itbook.store/1.0/search/${search}`")
+  //     .then((response) => response.json())
+  //     .then((response) => { console.log(response.search); });
+  //   // .then((response) => setSearchBooks(response));
+  // }, [title]);
 
   // const onSubmit = (search: string | undefined) => {
   //   dispatch(fetchSearchBooks(search))
@@ -64,8 +64,6 @@ export const SearchPage = () => {
       <Link to={ROUTE.RESETPASSWORD}>Go to Reset Password</Link>
       <Link to={ROUTE.SIGNUP}>Go to Sign up</Link>
       <div></div>
-      < BookList books={books} />
-
       {isLoading && <Spinner />}
       {error && <div>{error}</div>}
       {books?.length > 0 && < BookList books={books} />}
