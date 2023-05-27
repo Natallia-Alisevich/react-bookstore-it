@@ -1,5 +1,4 @@
-import { BookList, Spinner } from "components";
-import { FormSubscribe } from "components/FormSubscribe/FormSubscribe";
+import { BookList, FormSubscribe, Spinner } from "components";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { ROUTE } from "routes";
@@ -8,9 +7,6 @@ import {
   selectNewBook
 } from "store";
 import { useAppDispatch, useAppSelector } from "store/hooks/hooks";
-import { selectSearch } from "store/selectors/searchSelector";
-import { BookInfo, BookStore } from "types";
-import { NewInfo } from "types/types";
 
 
 export const HomePage = () => {
@@ -76,8 +72,6 @@ export const HomePage = () => {
       <Link to={ROUTE.DETAILS}>Go to details</Link>
       <Link to={ROUTE.RESETPASSWORD}>Go to Reset Password</Link>
       <Link to={ROUTE.SIGNUP}>Go to Sign up</Link>
-
-      <p> quis aspead tempora, perspiciatis dolores magnam?</p>
       {isLoading && <Spinner />}
       {error && <div>{error}</div>}
       {books?.length > 0 && < BookList books={books} />}

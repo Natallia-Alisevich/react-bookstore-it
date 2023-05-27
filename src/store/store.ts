@@ -14,7 +14,7 @@ export const store = configureStore({
   reducer: {
     cart: cartReducer,
     newBooks: newBooksReducer,
-    searchBooks: searchBooksReducer,
+    search: searchBooksReducer,
     favoriteBooks: favoriteBooksReducer,
   }, // каждый reducer:-это ключ к объекту нашего редакса
 });

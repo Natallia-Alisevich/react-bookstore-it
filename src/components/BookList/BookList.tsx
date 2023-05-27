@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, generatePath } from "react-router-dom";
 import { ROUTE } from "../../routes";
-import { BookInfo, BooksInfo } from "types/types";
+import { BookInfo, BooksInfo, SearchInfo } from "types/types";
 import { BookItem } from "components/BookItem/BookItem";
 import { BooksWrapper } from "./styles";
 
@@ -13,7 +13,7 @@ export const BookList = ({ books }: BookListProps) => {
   return (
     <BooksWrapper>
       {books.map((book) => {
-        return <BookItem book={book} />;
+        return <BookItem book={book}/>;
       })}
     </BooksWrapper>
   );
