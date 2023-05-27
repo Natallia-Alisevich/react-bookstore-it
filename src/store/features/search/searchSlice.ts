@@ -7,6 +7,10 @@ interface SearchState extends SearchInfo {
   isLoading: boolean;
 }
 
+interface OptionProps {
+  title: string | undefined;
+}
+
 const initialState: SearchState = {
   error: null,
   total: "",
@@ -17,31 +21,42 @@ const initialState: SearchState = {
 
 // // для асинхр actions нужна ф-я createAsyncThunk, ф-я генерирует
 // // экшины на основе жиз циклов промисов:
-export const fetchSearchBooks = createAsyncThunk<SearchInfo, string, { rejectValue: string }>(
-  "searchBooks/fetchSearchBooks",
-  async (searchBook, { rejectWithValue }) => {
-    try {
-      const { data } = await axios.get(`https://api.itbook.store/1.0/search/${searchBook}`);
-      return data;
-    } catch (error) {
-      const someErrorMessage = error as AxiosError;
-      return rejectWithValue(someErrorMessage.message);
-    }
-  },
-);
-const SearchSlice = createSlice({
-  name: "searchBooks",
+export const fetchSearchBooks = createAsyncThunk<
+  SearchInfo,
+  string | undefined,
+  { rejectValue: string }
+>("search/fetchSearchBooks", async (search, { rejectWithValue }) => {
+  try {
+    const { data } = await axios.get(`https://api.itbook.store/1.0/search/${search}`);
+    return data;
+  } catch (error) {
+    const someErrorMessage = error as AxiosError;
+    return rejectWithValue(someErrorMessage.message);
+  }
+});
+const searchSlice = createSlice({
+  name: "search",
   initialState,
-  reducers: {
-    newInfo: (state) => {
-      console.log("ok");
-    },
+  reducers: {},
+  extraReducers(builder) {
+    builder.addCase(fetchSearchBooks.pending, (state) => {
+      state.isLoading = true;
+    });
+    builder.addCase(fetchSearchBooks.fulfilled, (state, { payload }) => {
+      state.isLoading = false;
+      state.books = payload.books;
+      state.total = payload.total;
+    });
+    builder.addCase(fetchSearchBooks.rejected, (state, { payload }) => {
+      if (payload) {
+        state.isLoading = false;
+        state.error = payload;
+      }
+    });
   },
 });
 
-export default SearchSlice.reducer;
-
-export const { newInfo } = SearchSlice.actions; //выз ф-ю эдкарт в hompage
+export default searchSlice.reducer;
 
 // отличия createAsyncThunk:
 // createAsyncThunk нах вне нашего слайса, она объявл не в редусерах, а отдельно
