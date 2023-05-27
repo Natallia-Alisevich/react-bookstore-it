@@ -1,8 +1,13 @@
+import { Form } from "components";
 import React from "react";
 
+
 export const SignUpPage = () => {
-  return (
+  return (<>
     <div>SignUpPage</div>
+    <Form />
+  </>
+
   );
 };
 
