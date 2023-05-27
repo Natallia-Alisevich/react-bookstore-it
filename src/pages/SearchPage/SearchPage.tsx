@@ -1,6 +1,7 @@
 import { BookList, FormSubscribe, Spinner } from "components";
 import { BookItem } from "components/BookItem/BookItem";
 import { useEffect, useState } from "react";
+import { useForm } from "react-hook-form";
 import { Link, useParams, useSearchParams } from "react-router-dom";
 import { ROUTE } from "routes";
 import {
@@ -15,15 +16,23 @@ export const SearchPage = () => {
   const { isLoading, books, error } = useAppSelector(selectSearch);
   const { title } = useParams();
   const [searchParams] = useSearchParams();
+  const { register, handleSubmit } = useForm();
 
-  //const title = searchParams.get("title");
+  const dispatch = useAppDispatch();
+
+  const onSubmit = ({ searchValue }: any) => { dispatch(fetchSearchBooks(searchValue)) };
+
   interface SearchState extends SearchInfo {
     isLoading: boolean;
   }
 
   const [search, setSearchBooks] = useState<SearchState>();
 
-  const dispatch = useAppDispatch();
+
+
+
+
+
   useEffect(() => {
     fetch("`https://api.itbook.store/1.0/search/${search}`")
       .then((response) => response.json())
@@ -31,6 +40,9 @@ export const SearchPage = () => {
     // .then((response) => setSearchBooks(response));
   }, [title]);
 
+  // const onSubmit = (search: string | undefined) => {
+  //   dispatch(fetchSearchBooks(search))
+  // }
 
   useEffect(() => {
     if (title) {
@@ -41,6 +53,10 @@ export const SearchPage = () => {
   return (
     <div>
       <h1>Search</h1>
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <input type="text"  {...register("searchValue")} />
+        <button type="submit">Search</button>
+      </form>
       <h1>‘beginners’ Search results</h1>
       <Link to={ROUTE.FAVORITE}>Go to favorite</Link>
       <Link to="/">Go to Home</Link>
