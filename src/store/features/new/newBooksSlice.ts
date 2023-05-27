@@ -1,7 +1,5 @@
 import { createAsyncThunk, createSlice, isRejectedWithValue } from "@reduxjs/toolkit";
-import { rejects } from "assert";
 import axios, { AxiosError } from "axios";
-import { BooksInfo } from "types";
 import { NewInfo } from "types/types";
 
 interface NewBooksState extends NewInfo {

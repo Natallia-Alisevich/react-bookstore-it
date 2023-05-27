@@ -1,6 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 import { reset } from "./reset";
 import { Color } from "./colors";
+import { Head1 } from "./typography";
 
 export const GlobalStyles = createGlobalStyle`
 ${reset};
@@ -11,5 +12,8 @@ body{
   line-height: 32px;
   color: ${Color.Primary};
   background-color: ${Color.White};
+}
+h1{
+  ${Head1}
 }
 `;
