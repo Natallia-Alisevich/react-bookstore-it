@@ -34,7 +34,6 @@ export const Form = () => {
             console.log(userCredential);
 
             //     const user = userCredential.user;
-
             // })
             //     .catch((error) => {
             //         const errorCode = error.code;
