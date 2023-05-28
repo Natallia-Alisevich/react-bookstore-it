@@ -16,4 +16,7 @@ body{
 h1{
   ${Head1}
 }
+button{
+  cursor: pointer;
+}
 `;

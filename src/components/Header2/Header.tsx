@@ -4,7 +4,7 @@ import { HeaderLogo, HeaderNavigate, StyledHeader } from "./styles";
 import { Link } from "react-router-dom";
 import { BookstoreIcon, HeartIcon, CartIcon, PersonIcon } from "assets";
 import { ROUTE } from "routes";
-import { Spinner } from "components";
+import { FormSearch, Spinner } from "components";
 
 export const Header = () => {
   return (
@@ -14,7 +14,8 @@ export const Header = () => {
           < BookstoreIcon />
         </HeaderLogo>
       </Link>
-      <input />
+      {/* <input /> */}
+      <FormSearch />
       <HeaderNavigate>
         <Link to={ROUTE.FAVORITE}>
           <HeartIcon />
