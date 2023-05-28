@@ -1,16 +1,16 @@
 import styled from "styled-components";
 import { Color } from "ui";
+import { Media } from "ui/media";
 
 const BooksWrapper = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  gap: 32px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 390px));
+  /* justify-content: center; */
   justify-content: space-between;
+  grid-gap: 16px;
   padding-bottom: 73px;
   border-bottom: 1px solid ${Color.Grey};
-  & :last-child {
-    gap: 0;
-  }
+
   & > :nth-child(n + 5) > :nth-child(1) {
     background-color: ${Color.Green};
   }
@@ -22,6 +22,21 @@ const BooksWrapper = styled.div`
   }
   & > :nth-child(3n + 1) > :nth-child(1) {
     background-color: ${Color.Purple};
+  }
+  ${Media.xxl} {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 350px));
+    /* justify-content: center; */
+  }
+  ${Media.xl} {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 280px));
+    /* justify-content: center; */
+  }
+  ${Media.lg} {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 370px));
+    justify-content: center;
+  }
+  ${Media.md} {
+    grid-template-columns: repeat(auto-fill, 100%);
   }
 `;
 

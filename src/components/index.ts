@@ -5,7 +5,9 @@ import { RequareAuth } from "./RequareAuth/RequareAuth";
 import { Spinner } from "./Spinner/Spinner";
 import { FormSubscribe } from "./FormSubscribe/FormSubscribe";
 import { Star } from "./StarRating/StarRating";
+import { Form } from "./Form/Form";
+import { FormSearch } from "./FormSearch/FormSearch";
 // import { Burger } from "./BurgerMenu/Burger";
 
-export { Header, Footer, BookList, RequareAuth, Spinner, FormSubscribe, Star };
+export { Header, Footer, BookList, RequareAuth, Spinner, FormSubscribe, Form, FormSearch, Star };
 // Burger };
