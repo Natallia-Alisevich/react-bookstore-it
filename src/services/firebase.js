@@ -2,12 +2,13 @@ import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDTgONPh7DTcv1iJrO4Dr352_214NhmNzY",
-  authDomain: "react-bookstore-it.firebaseapp.com",
-  projectId: "react-bookstore-it",
-  storageBucket: "react-bookstore-it.appspot.com",
-  messagingSenderId: "12007328814",
-  appId: "1:12007328814:web:359e40a1238edf951063bf",
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID,
+  bookApi: process.env.REACT_APP_BOOK_API,
 };
 
 const app = initializeApp(firebaseConfig);
