@@ -18,6 +18,3 @@ export default favoriteSlice.reducer;
 
 export const {  } = favoriteSlice.actions;
 
-// createAsyncThunk;
-
-// createAsyncThunk- для созд асинхрон кода

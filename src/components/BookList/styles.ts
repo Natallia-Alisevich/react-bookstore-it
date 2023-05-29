@@ -5,10 +5,9 @@ import { Media } from "ui/media";
 const BooksWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 390px));
-  /* justify-content: center; */
   justify-content: space-between;
   grid-gap: 16px;
-  padding-bottom: 73px;
+  padding: 49px 0 73px;
   border-bottom: 1px solid ${Color.Grey};
 
   & > :nth-child(n + 5) > :nth-child(1) {
@@ -25,11 +24,9 @@ const BooksWrapper = styled.div`
   }
   ${Media.xxl} {
     grid-template-columns: repeat(auto-fill, minmax(200px, 350px));
-    /* justify-content: center; */
   }
   ${Media.xl} {
     grid-template-columns: repeat(auto-fill, minmax(200px, 280px));
-    /* justify-content: center; */
   }
   ${Media.lg} {
     grid-template-columns: repeat(auto-fill, minmax(200px, 370px));

@@ -13,14 +13,12 @@ import {
     BookInfoWrapper,
     WrapPrice,
 } from "./styles";
-import { Star } from "components/StarRating/StarRating";
+import { Star } from "components";
 
 
 interface BookItemProps {
     book: BooksInfo;
 }
-
-
 
 export const BookItem = ({ book }: BookItemProps) => {
     console.log({ book });
@@ -37,18 +35,9 @@ export const BookItem = ({ book }: BookItemProps) => {
                 <BookAuth>{book.subtitle}</BookAuth>
                 <WrapPrice>
                     <BookPrice > {book.price}</BookPrice>
-                    {/* <Star stars={+book.rating} /> */}
-                    {book.rating ? <Star stars={+book.rating} /> : <Star stars={5} />}
+                    {book.rating ? <Star stars={+book.rating} /> : <Star stars={4} />}
                 </WrapPrice>
-                {/* <Rate>{book.rating}</Rate> */}
             </BookInfoWrapper>
         </BookCard>
     );
 };
-
-
-//ч! динамически сгенерировать линк переходим в Utilities => generatePath
-// ГОВОРЮ: <Link to={generatePath(ROUTE.DETAILS)}> ссылка сгенерируй мне путь
-// и принимает (при наведении на него) ориджиналпэс(путь), а путь у нас в енаме в роуте
-
-// ч вернуться назад нужна кнопка "назад" в detailpage:

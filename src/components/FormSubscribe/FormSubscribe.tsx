@@ -3,10 +3,6 @@ import { Controller, useForm } from "react-hook-form";
 import { StyledButton, StyledForm, StyledInput, Subtitle, Title, WrapValue } from "./styles";
 
 
-
-
-
-
 export const FormSubscribe = () => {
     const { register, handleSubmit, control, formState: { errors } } = useForm();
 
@@ -45,7 +41,6 @@ export const FormSubscribe = () => {
                 )}
                 <StyledButton type="submit">Subscribe</StyledButton>
             </WrapValue>
-
         </StyledForm>
     );
 };

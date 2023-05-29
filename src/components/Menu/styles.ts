@@ -19,7 +19,6 @@ const StyledNav = styled(motion.nav)`
     width: 20vw;
     height: calc(50vh);
     background-color: ${Color.Green};
-    /* opacity: 0; */
     transform: translateX(-100%);
   }
 `;

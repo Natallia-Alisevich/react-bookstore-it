@@ -43,8 +43,6 @@ const SearchIcon = styled(SearchIconInput)`
   }
   ${Media.xl} {
     display: none;
-    /* right: 25%;
-    bottom: 65%; */
   }
   ${Media.lg} {
     display: block;

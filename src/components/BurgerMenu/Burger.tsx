@@ -2,7 +2,6 @@ import React from "react";
 import { BurgerIcon, StyledButton } from "./styles";
 import { color } from "framer-motion";
 
-
 interface BurgerMenuProps {
     toggleMenu: () => void;
     isMenuOpen: boolean;

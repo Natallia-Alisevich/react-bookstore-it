@@ -5,36 +5,13 @@ import { BodySubText, Head3, SubText } from "ui/typography";
 
 const BookCard = styled.div`
   display: flex;
-  /* display: grid; */
   gap: 20px;
-  /* width: 100%;
-  max-width: 342px; */
   flex-direction: column;
   cursor: pointer;
   &:hover {
     transition: 0.5s solid;
     outline: 5px solid ${Color.Orange};
   }
-  /* ${Media.xxl} {
-    max-width: 250px;
-    max-height: 379px;
-  }
-  /* ${Media.xl} {
-    max-width: 275px;
-    max-height: 379px;
-  } */
-  /* ${Media.lg} {
-    max-width: 100%;
-    max-height: 379px;
-  } */
-  /* ${Media.md} {
-    max-width: 220px;
-  } 
-  ${Media.sm} {
-    max-width: 100%;
-    min-height: 255px;
-    margin: auto;  */
-  /* }  */
 `;
 const ImageWrapper = styled.div`
   display: flex;

@@ -1,4 +1,4 @@
-import { BurgerOpenIcon, SearchIconInput } from "assets";
+import { BurgerOpenIcon } from "assets";
 import styled from "styled-components";
 import { Color } from "ui";
 

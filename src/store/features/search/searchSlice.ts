@@ -19,8 +19,6 @@ const initialState: SearchState = {
   isLoading: false,
 };
 
-// // для асинхр actions нужна ф-я createAsyncThunk, ф-я генерирует
-// // экшины на основе жиз циклов промисов:
 export const fetchSearchBooks = createAsyncThunk<
   SearchInfo,
   string | undefined,
@@ -57,14 +55,3 @@ const searchSlice = createSlice({
 });
 
 export default searchSlice.reducer;
-
-// отличия createAsyncThunk:
-// createAsyncThunk нах вне нашего слайса, она объявл не в редусерах, а отдельно
-//  и по оконч-ю своего вып-я она возв-ет нам action fetchSearchBooks, кот помещаем внутрь диспатча
-// ф-я д сгенер-ть имя typePrefix (это 1 арг), оно всегда склеивается
-//  ч-з "/" :1. имя слайса/имя экшина, возвр-го ф-ей createAsyncThunk
-// 2 обяз арг-это фсинхр ф-я
-
-// переходим в store.ts и в редусер вносим нашкусочек search
-
-// слайсы сделать: аккаунте, дитэйлс, корзина, с новыми книгами, с избранными

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Color } from "ui";
 import { Media } from "ui/media";
-import { BodyText1, BodyText2, Head1, Head2, Head3, SubText } from "ui/typography";
+import { BodyText1, Head1, Head2, Head3 } from "ui/typography";
 
 const DetailsTitle = styled.p`
   ${Head1}margin-bottom: 48px;
@@ -45,9 +45,11 @@ const DetailsInfoHead = styled.div`
   justify-content: space-between;
   margin-bottom: 24px;
 `;
+
 const DetailsPrice = styled.div`
   ${Head2}
 `;
+
 const InfoWrap = styled.div`
   display: flex;
   justify-content: space-between;
@@ -57,6 +59,7 @@ const InfoWrap = styled.div`
     color: ${Color.Primary};
   }
 `;
+
 const StyledButton = styled.button`
   width: 100%;
   height: 56px;
@@ -70,20 +73,8 @@ const DetailsPreview = styled.div`
   display: flex;
   justify-content: center;
   margin-top: 40px;
-  ${Media.md} {
-    /* margin-bottom: auto; */
-    /* width: 100%;
-    flex-wrap: wrap;
-    margin-bottom: 89px; */
-  }
 `;
-const DetailsDescr = styled.div`
-  ${BodyText1}/* ${Media.md} {
-    width: 100%;
-    flex-wrap: wrap;
-    margin-bottom: 89px;
-  } */
-`;
+
 const BackIcon = styled.button`
   background-color: transparent;
   border: none;
@@ -99,6 +90,5 @@ export {
   InfoWrap,
   StyledButton,
   DetailsPreview,
-  DetailsDescr,
   BackIcon,
 };
