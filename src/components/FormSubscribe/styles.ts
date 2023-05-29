@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Color } from "ui";
+import { Media } from "ui/media";
 import { Head2, Sub1 } from "ui/typography";
 
 const StyledForm = styled.form`

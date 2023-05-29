@@ -2,7 +2,7 @@ import { Route, createBrowserRouter, createRoutesFromElements } from "react-rout
 import { ROUTE } from "./routes";
 import {
   AccountPage, CartPage, DetailsPage, FavoritePage, HomePage, ResetPasswordPage,
-  SearchPage, SignUpPage
+  SearchPage, SignInPage, SignUpPage
 } from "pages";
 
 import { MainTemplate } from "templates";
@@ -19,6 +19,7 @@ export const router = createBrowserRouter(createRoutesFromElements(
     <Route path={ROUTE.SEARCH} element={<SearchPage />} />
     <Route path={ROUTE.RESETPASSWORD} element={<ResetPasswordPage />} />
     <Route path={ROUTE.SIGNUP} element={<SignUpPage />} />
+    <Route path={ROUTE.SIGNIN} element={<SignInPage />} />
     <Route path={ROUTE.DETAILS} element={<DetailsPage />} />
     <Route path={ROUTE.REQUAREAUTH} element={<RequareAuth />} />
     <Route path={ROUTE.FAVORITE} element={<FavoritePage />} />

@@ -1,6 +1,6 @@
 import React from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
-import { StyledForm } from "./styles";
+import { StyledButton, StyledForm } from "./styles";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "services";
 
@@ -19,7 +19,7 @@ interface AuthValues {
 
 
 
-export const Form = () => {
+export const Form = ({ email, password }: AuthValues) => {
     const { register, handleSubmit } = useForm<AuthValues>();
 
     const onSubmit: SubmitHandler<AuthValues> = ({ email, password }: AuthValues) => {
@@ -45,7 +45,7 @@ export const Form = () => {
         <StyledForm onSubmit={handleSubmit(onSubmit)}>
             <input type="text" {...register("email")} placeholder="email" />
             <input type="password" {...register("password")} placeholder="password" />
-            <button>Submit</button>
+            <StyledButton>sign UP</StyledButton>
         </StyledForm>
     )
 }

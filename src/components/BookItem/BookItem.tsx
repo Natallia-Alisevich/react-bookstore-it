@@ -38,7 +38,7 @@ export const BookItem = ({ book }: BookItemProps) => {
                 <WrapPrice>
                     <BookPrice > {book.price}</BookPrice>
                     {/* <Star stars={+book.rating} /> */}
-                    {book.rating ? <Star stars={+book.rating} /> : <Star stars={2} />}
+                    {book.rating ? <Star stars={+book.rating} /> : <Star stars={5} />}
                 </WrapPrice>
                 {/* <Rate>{book.rating}</Rate> */}
             </BookInfoWrapper>

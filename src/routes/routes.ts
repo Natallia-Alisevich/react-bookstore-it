@@ -2,7 +2,7 @@ export enum ROUTE {
   HOME = "/",
   CART = "cart",
   SIGNUP = "signUp",
-  SIGNING = "signIn",
+  SIGNIN = "signIn",
   SEARCH = "search",
   ACCOUNT = "account",
   FAVORITE = "favorite",
