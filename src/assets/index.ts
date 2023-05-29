@@ -5,6 +5,7 @@ import { ReactComponent as PersonIcon } from "./icons/person.svg";
 import { ReactComponent as SignInIcon } from "./icons/sign-in.svg";
 import { ReactComponent as SearchIconInput } from "./icons/search.svg";
 import { ReactComponent as BurgerOpenIcon } from "./icons/burger-open.svg";
+import { ReactComponent as ArrowBackIcon } from "./icons/arrow.svg";
 
 export {
   BookstoreIcon,
@@ -14,4 +15,5 @@ export {
   SearchIconInput,
   SignInIcon,
   BurgerOpenIcon,
+  ArrowBackIcon,
 };

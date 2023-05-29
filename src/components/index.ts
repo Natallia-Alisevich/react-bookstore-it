@@ -8,6 +8,8 @@ import { Star } from "./StarRating/StarRating";
 import { Form } from "./Form/Form";
 import { FormSearch } from "./FormSearch/FormSearch";
 import { Burger } from "./BurgerMenu/Burger";
+import { TabBooks } from "./Tab/Tab";
+import { TotalCost } from "./TotalCost/TotalCost";
 
 export {
   Header,
@@ -20,4 +22,6 @@ export {
   FormSearch,
   Star,
   Burger,
+  TabBooks,
+  TotalCost,
 };

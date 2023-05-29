@@ -84,6 +84,11 @@ const DetailsDescr = styled.div`
     margin-bottom: 89px;
   } */
 `;
+const BackIcon = styled.button`
+  background-color: transparent;
+  border: none;
+  padding: 37px 0;
+`;
 export {
   DetailsTitle,
   DetailsCard,
@@ -95,4 +100,5 @@ export {
   StyledButton,
   DetailsPreview,
   DetailsDescr,
+  BackIcon,
 };
