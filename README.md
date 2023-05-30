@@ -11,10 +11,10 @@
 <p align="center">
    This is a store that will help you find any book to go!
     <br />
-    <a href="https://github.com/Natali2707/react-bookstore-it"><strong>Explore this Store >>>></strong></a>
+    <a href="https://github.com/Natallia-Alisevich/react-bookstore-it"><strong>Explore this Store >>>></strong></a>
     <br />
     <br />
-    <a href="https://natali2707.github.io/react-bookstore-it/">View Demo</a>
+    <a href="https://natallia-alisevich.github.io/react-bookstore-it/">View Demo</a>
   </p>
 </div>
 
@@ -28,6 +28,15 @@ Today the bookstore "Bookstore-IT" is one of the most dynamically developing boo
 You can learn more about each book on our website:
 
 <img src="/preview/photo_2.jpg" style="width: 70%; margin: 0 auto!important; display: block!important;">
+
+## This project uses react hooks
+
+useForm(), useWindowSize(), useParams(), useState(), useEffect(), useCallback(), useNavigate(), useDispatch(), useSelector().
+
+## and uses custom hooks
+
+useToggle(), useAppDispatch(), useAppSelector()
+
 ### Built With Next Pakages & Libraries:
 
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
@@ -44,7 +53,6 @@ You can learn more about each book on our website:
 [react-hook-form-url]: https://react-hook-form.com/
 [firebase]: https://img.shields.io/badge/Firebase-20232A?style=for-the-badge&logo=firebase&logoColor=61DAFB
 [firebase-url]: https://firebase.google.com/
-
 [reactrouter]: https://img.shields.io/badge/React%20Router-20232A?style=for-the-badge&logo=reactrouter&logoColor=61DAFB
 [reactrouter-url]: https://reactrouter.com/en/main
 [axios]: https://img.shields.io/badge/Axios-20232A?style=for-the-badge&logo=axios&logoColor=61DAFB
@@ -67,4 +75,6 @@ You can learn more about each book on our website:
 
 My name-Natallia Alisevich- [@mail.ru]- alisevich.nata@mail.ru
 
-Project Link: [https://github.com/Natali2707/react-bookstore-it](https://github.com/Natali2707/react-bookstore-it)
+phone number: +375 29 746 54 18
+
+Project Link: [https://github.com/Natallia-Alisevich/react-bookstore-it](https://github.com/Natallia-Alisevich/react-bookstore-it)
