@@ -3,7 +3,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/Natali2707/react-bookstore-it">
-    <img src="/preview/bookstore.png" alt="Logo" width="80" height="80">
+    <img src="/preview/bookstore.svg" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">React-Bookstore-IT</h3>
@@ -44,6 +44,7 @@ You can learn more about each book on our website:
 [react-hook-form-url]: https://react-hook-form.com/
 [firebase]: https://img.shields.io/badge/Firebase-20232A?style=for-the-badge&logo=firebase&logoColor=61DAFB
 [firebase-url]: https://firebase.google.com/
+
 [reactrouter]: https://img.shields.io/badge/React%20Router-20232A?style=for-the-badge&logo=reactrouter&logoColor=61DAFB
 [reactrouter-url]: https://reactrouter.com/en/main
 [axios]: https://img.shields.io/badge/Axios-20232A?style=for-the-badge&logo=axios&logoColor=61DAFB
@@ -57,7 +58,7 @@ You can learn more about each book on our website:
 - [![GH-pages][GH-pages.js]][GH-pages-url]
 - [![styled-components][styled-components.js]][styled-components-url]
 - [![react-hook-form][react-hook-form.js]][react-hook-form-url]
-- [![reactrouter][reactrouter.js]][reactrouter-url]
+- [![reactrouter][reactrouter]][reactrouter-url]
 - [![firebase][firebase]][firebase-url]
 - [![axios][axios]][axios-url]
 - [![Framer-motion][Framer-motion]][Framer-motion-url]
