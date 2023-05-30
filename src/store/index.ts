@@ -6,6 +6,11 @@ import { fetchSearchBooks } from "./features/search/searchSlice";
 import { fetchNewBooks } from "./features/new/newBooksSlice";
 import { selectCart } from "./selectors/cartSelector";
 import { selectNewBook } from "./selectors/newBookSelector";
+import newBooksReducer from "./features/new/newBooksSlice";
+import cartReducer from "./features/cart/cartSlice";
+import searchBooksReducer from "./features/search/searchSlice";
+import favoriteBooksReducer from "./features/favorite/favoriteBooksSlice";
+import userReducer, { fetchSignUpUser } from "./features/user/userSlice";
 
 export {
   useDebounce,
@@ -18,5 +23,11 @@ export {
   fetchNewBooks,
   selectCart,
   selectNewBook,
+  newBooksReducer,
+  cartReducer,
+  searchBooksReducer,
+  favoriteBooksReducer,
+  userReducer,
+  fetchSignUpUser,
 };
 export type { RootState, AppDispatch };

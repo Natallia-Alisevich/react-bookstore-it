@@ -38,11 +38,6 @@ export const SearchPage = () => {
     <div>
       <h1>Search</h1>
       <h1>‘beginners’ Search results</h1>
-      <Link to={ROUTE.FAVORITE}>Go to favorite</Link>
-      <Link to="/">Go to Home</Link>
-      <Link to={ROUTE.DETAILS}>Go to details</Link>
-      <Link to={ROUTE.RESETPASSWORD}>Go to Reset Password</Link>
-      <Link to={ROUTE.SIGNUP}>Go to Sign up</Link>
       <div></div>
       {isLoading && <Spinner />}
       {error && <div>{error}</div>}

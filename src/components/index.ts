@@ -5,11 +5,12 @@ import { RequareAuth } from "./RequareAuth/RequareAuth";
 import { Spinner } from "./Spinner/Spinner";
 import { FormSubscribe } from "./FormSubscribe/FormSubscribe";
 import { Star } from "./StarRating/StarRating";
-import { Form } from "./FormAuth/Form";
+import { Form, AuthValue } from "./FormAuth/Form";
 import { FormSearch } from "./FormSearch/FormSearch";
 import { Burger } from "./BurgerMenu/Burger";
 import { TabBooks } from "./Tab/Tab";
 import { TotalCost } from "./TotalCost/TotalCost";
+import { Modal } from "./Modal/Modal";
 
 export {
   Header,
@@ -24,4 +25,6 @@ export {
   Burger,
   TabBooks,
   TotalCost,
+  Modal,
 };
+export type { AuthValue };
