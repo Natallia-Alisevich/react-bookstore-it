@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.js": "/react-bookstore-it/static/js/main.3f24fd13.js",
+    "static/media/book-logo.svg": "/react-bookstore-it/static/media/book-logo.7cb24bfd069f745101cee82e86f25e00.svg",
+    "index.html": "/react-bookstore-it/index.html",
+    "static/media/arrow.svg": "/react-bookstore-it/static/media/arrow.cfb3190c5eda02964eb88c799f100638.svg",
+    "static/media/heart.svg": "/react-bookstore-it/static/media/heart.5ec373d9a9effc188b8ee7db9e49b79e.svg",
+    "static/media/cart.svg": "/react-bookstore-it/static/media/cart.596dd00b2044cb036b288d2bbc8028e8.svg",
+    "static/media/sign-in.svg": "/react-bookstore-it/static/media/sign-in.a6c92401bdc320c5c2c8004175cf3998.svg",
+    "static/media/person.svg": "/react-bookstore-it/static/media/person.374f708c85fcf8816cf4227ff19d9d9b.svg",
+    "static/media/search.svg": "/react-bookstore-it/static/media/search.c024a3122f357146e09dc24458c23bdf.svg",
+    "static/media/burger-open.svg": "/react-bookstore-it/static/media/burger-open.bed8595d1b87f23e369a880789a1847d.svg",
+    "main.3f24fd13.js.map": "/react-bookstore-it/static/js/main.3f24fd13.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.3f24fd13.js"
+  ]
+}
